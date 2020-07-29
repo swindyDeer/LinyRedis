@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LinyRedis</name>
+    </assembly>
+    <members>
+        <member name="T:LinyRedis.Controller.HashController">
+            <summary>
+            Hash类型
+            </summary>
+        </member>
+        <member name="M:LinyRedis.Controller.HashController.HSetAsync(LinyRedis.Service.Request.Hash.HSetRequest)">
+            <summary>
+            设置给定散列键值对
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.HashController.HGetAsync(LinyRedis.Service.Request.Hash.HGetRequest)">
+            <summary>
+            获取指定散列键的值
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.HashController.HGetAllAsync(System.String)">
+            <summary>
+            获取指定散列所有键值对
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.HashController.HDelAsync(LinyRedis.Service.Request.Hash.HDelRequest)">
+            <summary>
+            删除散列的指定键
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LinyRedis.Controller.ListController">
+            <summary>
+            List类型
+            </summary>
+        </member>
+        <member name="M:LinyRedis.Controller.ListController.RPushAsync(LinyRedis.Service.Request.KeyValueRequest)">
+            <summary>
+            将给定值推入列表右端（插入值）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.ListController.LRange(LinyRedis.Service.Request.List.LRangeRequest)">
+            <summary>
+            获取列表上在给定范围的所有值
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.ListController.LIndex(LinyRedis.Service.Request.List.LIndexRequest)">
+            <summary>
+            获取列表在给定位置上的单个元素
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.ListController.LPop(System.String)">
+            <summary>
+            从列表左端弹出一个值（删除值）
+            LPop即是一个删除操作，也是一个查询操作 所以也可以考虑delete语义
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LinyRedis.Controller.SetController">
+            <summary>
+            Set类型
+            </summary>
+        </member>
+        <member name="M:LinyRedis.Controller.SetController.SAddAsync(LinyRedis.Service.Request.KeyValueRequest)">
+            <summary>
+            将给定元素添加到集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.SetController.SMembersAsync(System.String)">
+            <summary>
+            查询集合包含的所有元素
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.SetController.SISMemberAsync(LinyRedis.Service.Request.KeyValueRequest)">
+            <summary>
+            查询给定元素是否在集合中
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.SetController.SRemAsync(LinyRedis.Service.Request.KeyValueRequest)">
+            <summary>
+            如果给定元素存在于集合中，删除这个元素
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LinyRedis.Controller.StringController">
+            <summary>
+            String类型
+            </summary>
+        </member>
+        <member name="M:LinyRedis.Controller.StringController.SetAsync(LinyRedis.Service.Request.KeyValueRequest)">
+            <summary>
+            设置
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.StringController.GetAsync(System.String)">
+            <summary>
+            get
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.StringController.DeleteAsync(System.String)">
+            <summary>
+            delete
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LinyRedis.Controller.ZSetController">
+            <summary>
+            ZSet类型
+            </summary>
+        </member>
+        <member name="M:LinyRedis.Controller.ZSetController.ZAddAsync(LinyRedis.Service.Request.ZSet.ZAddRequest)">
+            <summary>
+            有序集合添加分值
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.ZSetController.ZRangeAsync(LinyRedis.Service.Request.ZSet.ZRangeRequest)">
+            <summary>
+            从有序集合指定区间获取元素
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.ZSetController.ZRangeByScoreAsync(LinyRedis.Service.Request.ZSet.ZRangeByScoreRequest)">
+            <summary>
+            获取有序集合在给定分值范围内的所有元素
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Controller.ZSetController.ZRemAsync(LinyRedis.Service.Request.ZSet.ZRemRequest)">
+            <summary>
+            有序集合移除指定成员
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LinyRedis.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="P:LinyRedis.Service.Request.Hash.HDelRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.Hash.HDelRequest.SubKey">
+            <summary>
+            子键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.Hash.HGetRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.Hash.HGetRequest.SubKey">
+            <summary>
+            子键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.Hash.HSetRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.Hash.HSetRequest.SubKey">
+            <summary>
+            子键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.Hash.HSetRequest.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:LinyRedis.Service.Request.KeyValueRequest">
+            <summary>
+            键值请求
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.KeyValueRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.KeyValueRequest.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.List.LIndexRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.List.LIndexRequest.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.List.LRangeRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.List.LRangeRequest.MinIndex">
+            <summary>
+            最小索引
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.List.LRangeRequest.MaxIndex">
+            <summary>
+            最大索引
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.List.RPushRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.List.RPushRequest.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZAddRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZAddRequest.Member">
+            <summary>
+            成员
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZAddRequest.Score">
+            <summary>
+            分值
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZRangeByScoreRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZRangeByScoreRequest.MinScore">
+            <summary>
+            最小分值
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZRangeByScoreRequest.MaxScore">
+            <summary>
+            最大分值
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZRangeRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZRangeRequest.MinIndex">
+            <summary>
+            最小索引
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZRangeRequest.MaxIndex">
+            <summary>
+            最大索引
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZRemRequest.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Service.Request.ZSet.ZRemRequest.Member">
+            <summary>
+            成员
+            </summary>
+        </member>
+        <member name="P:LinyRedis.Startup.Configuration">
+            <summary>
+            配置
+            </summary>
+        </member>
+    </members>
+</doc>
