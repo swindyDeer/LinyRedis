@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArticleVote</name>
+    </assembly>
+    <members>
+        <member name="T:ArticleVote.Controller.ArticleController">
+            <summary>
+            文章控制器
+            </summary>
+        </member>
+        <member name="F:ArticleVote.Controller.ArticleController.ArticleService">
+            <summary>
+            文章服务
+            </summary>
+        </member>
+        <member name="M:ArticleVote.Controller.ArticleController.#ctor(ArticleVote.Service.Abstractions.IArticleService)">
+            <summary>
+            初始化
+            </summary>
+            <param name="articleService"></param>
+        </member>
+        <member name="M:ArticleVote.Controller.ArticleController.CreateAsync(ArticleVote.Service.Request.ArticleCreateRequest)">
+            <summary>
+            添加文章
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArticleVote.Controller.ArticleController.VoteAsync(ArticleVote.Service.Request.ArticleVoteRequest)">
+            <summary>
+            投票
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ArticleVote.Infrastructure.CacheConst.OneWeekSeconds">
+            <summary>
+            一个星期的秒数
+            </summary>
+        </member>
+        <member name="F:ArticleVote.Infrastructure.CacheConst.VoteScore">
+            <summary>
+            投票分数
+            </summary>
+        </member>
+        <member name="F:ArticleVote.Infrastructure.CacheConst.ArticleId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="F:ArticleVote.Infrastructure.CacheConst.Voted">
+            <summary>
+            已投票
+            </summary>
+        </member>
+        <member name="F:ArticleVote.Infrastructure.CacheConst.Article">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="F:ArticleVote.Infrastructure.CacheConst.Score">
+            <summary>
+            评分
+            </summary>
+        </member>
+        <member name="F:ArticleVote.Infrastructure.CacheConst.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="M:ArticleVote.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ArticleVote.Service.Abstractions.IArticleService">
+            <summary>
+            文章服务
+            </summary>
+        </member>
+        <member name="M:ArticleVote.Service.Abstractions.IArticleService.CreateAsync(ArticleVote.Service.Request.ArticleCreateRequest)">
+            <summary>
+            创建
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArticleVote.Service.Abstractions.IArticleService.VoteAsync(ArticleVote.Service.Request.ArticleVoteRequest)">
+            <summary>
+            投票
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ArticleVote.Service.Implements.ArticleService">
+            <summary>
+            文章服务
+            </summary>
+        </member>
+        <member name="M:ArticleVote.Service.Implements.ArticleService.CreateAsync(ArticleVote.Service.Request.ArticleCreateRequest)">
+            <summary>
+            创建
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArticleVote.Service.Implements.ArticleService.VoteAsync(ArticleVote.Service.Request.ArticleVoteRequest)">
+            <summary>
+            投票
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ArticleVote.Service.Implements.ArticleService.GetIdAsync">
+            <summary>
+            获取id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ArticleVote.Service.Implements.ArticleService.GetTimestamp(System.DateTime)">
+            <summary>
+            获取1970-01-01至dateTime的毫秒数
+            </summary>
+        </member>
+        <member name="T:ArticleVote.Service.Request.ArticleCreateRequest">
+            <summary>
+            文章创建请求
+            </summary>
+        </member>
+        <member name="P:ArticleVote.Service.Request.ArticleCreateRequest.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:ArticleVote.Service.Request.ArticleCreateRequest.Link">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:ArticleVote.Service.Request.ArticleCreateRequest.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="T:ArticleVote.Service.Request.ArticleVoteRequest">
+            <summary>
+            文章投票请求
+            </summary>
+        </member>
+        <member name="P:ArticleVote.Service.Request.ArticleVoteRequest.ArticleId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="P:ArticleVote.Service.Request.ArticleVoteRequest.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:ArticleVote.Startup.Configuration">
+            <summary>
+            配置
+            </summary>
+        </member>
+    </members>
+</doc>
